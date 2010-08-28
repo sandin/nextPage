@@ -1,0 +1,14 @@
+{
+  "name": "NextPage",
+  "version": "1.0",
+  "description": "find next page link",
+  "browser_action": {
+      "default_icon" : "icon.png"
+  },
+  "content_scripts" : [{
+    "js" : ["find_next_page.js"],
+    "matches" : ["http://*/*"],
+    "run_at" : "document_end"
+  }]
+}
+
