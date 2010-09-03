@@ -6,7 +6,7 @@
       "default_icon" : "icon.png"
   },
   "content_scripts" : [{
-    "js" : ["find_next_page.js"],
+    "js" : ["FindNextPage.js"],
     "matches" : ["http://*/*"],
     "run_at" : "document_end"
   }]
