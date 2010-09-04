@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript">
+
+chrome.extension.onRequest.addListener(
+    function(request, sender, sendResponse) {
+
+        var options = {};
+        options.grep = localStorage["np_grep"]; 
+
+        if (request.command == "getOptions") {
+            sendResponse(options);
+        }
+        else if (request.openNewestMail != null) {
+            accountWithNewestMail.openNewestMail();
+        }
+    }
+);
+
+</script>
+</head>
+<body>
+<h1>background.html</h1>
+
+</body>
+</html>

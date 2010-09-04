@@ -1,14 +1,17 @@
 {
-  "name": "NextPage",
-  "version": "1.0",
-  "description": "find next page link",
+  "background_page" : "background.html",
+  "description": "Map a hotkey to quick enter the next page",
   "browser_action": {
       "default_icon" : "icon.png"
   },
   "content_scripts" : [{
     "js" : ["FindNextPage.js"],
-    "matches" : ["http://*/*"],
+    "matches" : ["http://*/*", "https://*/*"],
     "run_at" : "document_end"
-  }]
+  }],
+   "name": "NextPage",
+   "options_page": "options.html",
+   "permissions": [ "tabs" ],
+   "version": "0.0.8"
 }
 

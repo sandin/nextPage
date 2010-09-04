@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<project name="nextPage" default="all" basedir=".">
+
+    <!-- 时间戳 -->
+    <tstamp><format property="now" pattern="yyyyMMdd-HHmm"/></tstamp>
+
+    <property file="ant.properties"/>
+
+    <!-- 准备工作 -->
+    <target name="prepare" description="准备工作">
+        <mkdir dir="${build.dir}"/>
+    </target>
+
+    <target name="package" description="打包">
+        <exec executable="${chrome.dir}/chrome.exe">
+            <arg value="--pack-extension=${extension.dir}" />
+        </exec>
+    </target>
+
+
+    <!-- 执行所有 -->
+    <target name="all" depends="clean,package" description="执行所有">
+    </target>
+
+    <!-- 清理工作 -->
+    <target name="clean" description="清理工作">
+        <delete dir="${build.dir}"/>
+    </target>
+
+
+
+
+</project>
+

@@ -1,0 +1,6 @@
+build/
+dest/
+other/
+*.swp
+*.db
+*.vim
