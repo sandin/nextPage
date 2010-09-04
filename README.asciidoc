@@ -1,3 +1,5 @@
 == NextPage ==
 
-This is for Chrome.
+NextPage extension for Chrome.
+
+Auto enter the next page when you press ']]', like Vimperator.
